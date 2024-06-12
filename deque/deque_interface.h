@@ -1,3 +1,5 @@
+#include <cstddef>
+
 #ifndef DEQUE_INTERFACE_H
 #define DEQUE_INTERFACE_H
 

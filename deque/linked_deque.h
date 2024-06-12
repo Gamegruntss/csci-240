@@ -29,6 +29,12 @@ class LinkedDeque : public Deque<T>
     void dequeueFront()
     {
         Node* tmp{head};
+        if(tail == head)
+        {
+            dequeueBack(); 
+            return;    
+        }
+
         head = tmp->next;
         head->previous = nullptr;
         delete tmp;        
@@ -37,6 +43,13 @@ class LinkedDeque : public Deque<T>
     void dequeueBack()
     {
         Node* tmp{tail};
+        if(tail == head)
+        {
+            delete tmp;
+            head = tail = nullptr;
+            return;
+        };
+
         tail = tail->previous;
         tail->next = nullptr;
         delete tmp;

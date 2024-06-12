@@ -1,7 +1,7 @@
-#include "linked_deque.h"
+#include "ArrayDeque.h"
 #include "test.h"
 
-#define SETUP Deque<int>* d{new LinkedDeque<int>}
+#define SETUP Deque<int>* d{new ArrayDeque<int>}
 #define TEARDOWN delete d
 
 void testInitEmpty();
